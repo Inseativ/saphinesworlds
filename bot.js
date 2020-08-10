@@ -101,7 +101,7 @@ client.unload = command => {
   });
 };
 client.on("guildCreate", guild => {
-  let log = client.channels.cache.find(x => x.id === "732200541408460832")  ;
+  let log = client.channels.cache.find(x => x.id === "Kanal İd")  ;
   const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya eklendim!")
     .setThumbnail(
@@ -120,7 +120,7 @@ client.on("guildCreate", guild => {
   log.send(embed);
 });
 client.on("guildDelete", guild => {
-  let log = client.channels.cache.find(x => x.id === "732201238476619808")  ;
+  let log = client.channels.cache.find(x => x.id === "Kanal İd")  ;
   const embed = new Discord.MessageEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail(
