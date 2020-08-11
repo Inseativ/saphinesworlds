@@ -9,8 +9,8 @@ require('./util/eventLoader')(client);
 var prefix = ayarlar.prefix;
 
 client.on('message', message => {
-if (message.content.toLowerCase() === prefix + 'ip') {
-  message.member.send("```diff\n-SpecialTR | Play.SpecialTR.Com   \n-GamerTR | BAKIMDA !!!\n```")
+if (message.content.toLowerCase() === prefix + 'Komut') {
+  message.member.send("```diff\n-Komut Yazısı\n```")
 }
 })
 
@@ -101,7 +101,7 @@ client.unload = command => {
   });
 };
 client.on("guildCreate", guild => {
-  let log = client.channels.cache.find(x => x.id === "Kanal İd")  ;
+  let log = client.channels.cache.find(x => x.id === "732200541408460832")  ;
   const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya eklendim!")
     .setThumbnail(
@@ -120,7 +120,7 @@ client.on("guildCreate", guild => {
   log.send(embed);
 });
 client.on("guildDelete", guild => {
-  let log = client.channels.cache.find(x => x.id === "Kanal İd")  ;
+  let log = client.channels.cache.find(x => x.id === "732201238476619808")  ;
   const embed = new Discord.MessageEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail(
@@ -144,66 +144,16 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
       msg.reply('<a:pikachu:715656791731601408> Aleyküm Selam Hoşgeldin <a:pikachu:715656791731601408> !');
 }
-if (msg.content.toLocaleLowerCase() === 'yes') {
-  msg.delete()
-   msg.channel.send('<a:yes:735061119168806922>')
-}
-if (msg.content.toLocaleLowerCase() === 'no') {
-  msg.delete()
-   msg.channel.send('<a:no:735061131558912071>')
-}
-if (msg.content.toLocaleLowerCase() === 'bilmem') {
-  msg.delete()
-   msg.channel.send('<a:bilmemki:735061104308256888>')
-}
-if (msg.content.toLocaleLowerCase() === 'heyy') {
-  msg.delete()
-   msg.channel.send('<a:stop:732616497217798155>')
-}
-if (msg.content.toLocaleLowerCase() === 'mavitik') {
-  msg.delete()
-   msg.channel.send('<a:mavitik:735458479375908866>')
-   console.log('Beni Biri Kullandı Lan')
-} 
-if (msg.content.toLocaleLowerCase() === 'youtube')
-msg.member.send('https://www.youtube.com/channel/UCW4zHmAirW4yAkwd_OZyzVA?view_as=subscriber Abone Olmayı Unutma Kral!')
-if (msg.content.toLowerCase() === ':frowning:') {
-  msg.delete()
-    msg.channels.send('☹')  
-}
-if (msg.content.toLocaleLowerCase()=== 'guzzy') {
-msg.channel.send('https://media.tenor.com/images/5b5fc640b1749b3bf8aa49c662f8ad72/tenor.gif')
-}
+
 if(msg.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
   msg.channel.send(`Merhaba, Beni mi etiketledin? 
   Prefixim: \`${prefix}\` `)
-}
-if (msg.content.toLowerCase() === 'roleplay') {
-  msg.reply('<a:pikachu:715656791731601408>-Anne: Oğlum gel şu odanı topla. \n-Oğlu: Yaaa anne sonra toplarım. \n-dışses: Akşam olur ve hala odasını toplamadan yatar. \n-Anne: Oğlum yarın o odanı kalkı kalmaz toplıyacaksın !!! \n-Oğlu: Tamam anne :( \n-DışSes: Ve artık günlerini böyle geçirirler Mutlu Son  <a:pikachu:715656791731601408> !');
-}
-  if (msg.content.toLowerCase() === 'pikavcu') {
-      msg.reply('<a:pikachu:715656791731601408>');
 }
 if (msg.content.toLocaleLowerCase() === 'emoji') {
   var embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
   .setDescription(`${client.emojis.cache.map(r => r).join("\n")}`)
   msg.channel.send(embed)
-}
-if (msg.content.toLowerCase() === 'hehe') {
-  msg.reply('<:hehe:741704301466091621>');
-}
-if (msg.content.toLowerCase() === 'kapak laflar') {
-  msg.reply('<a:pikachu:715656791731601408>\nhttps://www.youtube.com/watch?v=8Y46U6vLtl8\n<a:pikachu:715656791731601408>');
-}
-if (msg.content.toLowerCase() === 'tos') {
-    msg.reply('<a:pikachu:715656791731601408> https://discord.com/terms Lütfen Burayı Oku Discord Kuralları <a:pikachu:715656791731601408>');
-}
-if (msg.content.toLowerCase() === 'yardımcılar') {
-    msg.reply('<a:pikachu:715656791731601408> Bot Yapımında Yardımcı Olan Krallar  @B L A C K 🌸 | PARADOX 🌓#6767  @" Flo$er#1000  Seviliyorsunuz Krallar  ❤  <a:pikachu:715656791731601408>');
-}
-if (msg.content.toLowerCase() === 'yenilikler') {
-  msg.reply("\n<a:pikachu:715656791731601408> \nAfk Eklendi | .afk sebep   \nKüfür Engel Eklendi Her Zaman Aktif \n<a:pikachu:715656791731601408>")
 }
 });
 
