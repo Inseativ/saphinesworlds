@@ -6,10 +6,9 @@ exports.run = async (client, message, params, args) => {
   const yardım = new Discord.RichEmbed()
   .setColor(0x36393E)
       .setAuthor(`RabeL`, client.user.avatarURL)
-      .setDescription("RabeL Bot")
       .setThumbnail(client.user.avatarURL)
-      .addField("Abone Rolü Vermek için","r-a @etiket",false)
-      .addField("Web Sitemizi Ziyaret etmek için r-site")
+      .addField("Abone Rolü Vermek için","`r-a @etiket`",false)
+      .addField("\nWeb Sitemizi Ziyaret etmek için [TIKLA](https://web.rabelcode.tk)","`r-site`")
       .setFooter(`${message.author.username} tarafından istendi.`, message.author.avatarURL)
   return message.channel.sendEmbed(yardım);
 
