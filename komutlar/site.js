@@ -6,10 +6,8 @@ exports.run = async (client, message, params, args) => {
   const yardım = new Discord.RichEmbed()
   .setColor(0x36393E)
       .setAuthor(`RabeL`, client.user.avatarURL)
-      .setDescription("RabeL Bot")
       .setThumbnail(client.user.avatarURL)
-      .addField("Abone Rolü Vermek için","r-a @etiket",false)
-      .addField("Web Sitemizi Ziyaret etmek için r-site")
+      .setDescription("Birbirinden iyi Kaliteli Kodların Paylaşıldığı RabeL Code Web Sitesine Gitmek için [TIKLA](https://webrabelcode.tk)")
       .setFooter(`${message.author.username} tarafından istendi.`, message.author.avatarURL)
   return message.channel.sendEmbed(yardım);
 
@@ -20,12 +18,12 @@ exports.run = async (client, message, params, args) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['komut', 'komutlar', 'command', 'yardım', 'help', 'halp', 'y', 'h', 'commands'],
+    aliases: ['site'],
     permLevel: 0
   };
 
   exports.help = {
-    name: 'yardım',
-    description: 'yardım',
-    usage: 'yardım'
+    name: 'site',
+    description: 'site',
+    usage: 'site'
   };
