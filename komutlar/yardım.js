@@ -7,8 +7,8 @@ exports.run = async (client, message, params, args) => {
   .setColor(0x36393E)
       .setAuthor(`RabeL`, client.user.avatarURL)
       .setThumbnail(client.user.avatarURL)
-      .addField("Abone Rolü Vermek için","`r-a @etiket`",false)
-      .addField("\nWeb Sitemizi Ziyaret etmek için [TIKLA](https://web.rabelcode.tk)","`r-site`")
+      .addField("Abone Rolü Vermek için \`r-a @etiket\` ","Yetkiliye Özel",false)
+      .addField("\nWeb Sitemizi Ziyaret etmek için \`r-a site\`","[TIKLA](https://web.rabelcode.tk)",false)
       .setFooter(`${message.author.username} tarafından istendi.`, message.author.avatarURL)
   return message.channel.sendEmbed(yardım);
 
