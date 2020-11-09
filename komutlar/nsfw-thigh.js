@@ -5,7 +5,7 @@ const superagent = require('superagent');
 exports.run = (client, msg, args) => {
   if (msg.channel.nsfw === true) {
     superagent.get('https://nekobot.xyz/api/image')
-    .query({ type: 'lesbian'})
+    .query({ type: 'thigh'})
     .end((err, response) => {
       msg.channel.send({ file: response.body.message });
     });
@@ -17,12 +17,12 @@ exports.run = (client, msg, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['squirt','squirt'],
+  aliases: ['thigh','thigh'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'squirt',
+  name: 'thigh',
   description: 'Botun pingini gösterir',
-  usage: 'squirt'
+  usage: 'thigh'
 };
