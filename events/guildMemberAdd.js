@@ -1,8 +1,4 @@
-const Discord = require('discord.js');
-const db = require('megadb');
-let spre = new db.crearDB('spre')
-const message = require('./message');
 module.exports = member => {
     let username = member.user.username;
-    member.send('https://media.giphy.com/media/eSQFIjNhmeX28/giphy.gif Selamlar,Değerli **' + username + '** Discord Sunucuma Hoşgeldin :kissing_heart: #kurallar a bakmayı unutma,lazım olacağından eminim. :thinking: Keyifli Vakit Geçirmen Dileğiyle https://gph.is/2VhWm6k :wink:');
+    member.sendMessage('Sunucuya Hşgeldin **' + username + '** Eğleniceğini Düşünüyorum!');
 };

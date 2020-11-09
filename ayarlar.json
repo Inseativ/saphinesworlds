@@ -1,5 +1,6 @@
 {
-  "prefix": "BOTUN PREFİX'i",
-  "sahip": "Kendi İD'iniz",
-  "token": "BOT TOKENİ"
+    "token" : "DİSCORD BOT TOKEN",
+	"adminID" : "BOTUN SAHİBİNİN İD'Sİ",
+    "prefix" : "PREFİX",
+	"passes" : 1
 }
