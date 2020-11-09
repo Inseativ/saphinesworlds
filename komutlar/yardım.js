@@ -8,7 +8,7 @@ exports.run = async (client, message, params, args) => {
       .setAuthor(`RabeL`, client.user.avatarURL)
       .setDescription("RabeL Bot")
       .setThumbnail(client.user.avatarURL)
-      .addField(`Abone Rolü vermek için > r-a @etiket \n Web Sitemizi Ziyaret etmek için [TIKLA](https://web.rabelcode.tk)`,false)
+      .addField(`Abone Rolü vermek için > r-a @etiket \n\n Web Sitemizi Ziyaret etmek için r-site`,false)
       .setFooter(`${message.author.username} tarafından istendi.`, message.author.avatarURL)
   return message.channel.sendEmbed(yardım);
 
