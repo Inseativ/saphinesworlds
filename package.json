@@ -1,17 +1,15 @@
 {
-  "name": "ilbeybey",
-  "version": "0.0.1",
-  "description": "",
+  "name": "hello-express",
+  "version": "1.0.0",
+  "description": "Gweep Creative#0001 | RabeL",
   "main": "bot.js",
   "scripts": {
-    "test": "node bot.js"
+    "watch": "nodemon bot.js",
+    "start": "node bot.js"
   },
-  "author": "İlbey",
-  "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
     "common-tags": "^1.8.0",
-    "discord.js": "^12.2.0",
     "figlet": "^1.4.0",
     "fs": "0.0.1-security",
     "g-image-search": "^1.0.2",
@@ -28,5 +26,16 @@
     "weather-js": "^2.0.0",
     "wio-covid-19-tr": "^1.0.0",
     "ytdl-core": "^2.1.7"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "chimp",
+    "chimp#0110"
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
