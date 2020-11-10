@@ -9,4 +9,4 @@ RabeL Bot Projesine Hoşgeldin!
 
 -------------------
 
-<a herf="https://youtube.com">Deneme</a>
+<a herf="https://www.youtube.com">Deneme</a>
