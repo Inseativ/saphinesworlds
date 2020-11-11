@@ -8,6 +8,10 @@ if (!message.guild) {
   .setAuthor(message.author.username, message.author.avatarURL)
   .addField('RabeL Uyarı', 'Ban Adlı Komutu Özel Mesajlarda Kullamazsın')
   return message.author.send(ozelmesajuyari); }
+      if (!message.member.roles.find("name", "⛔・ban-yetkilisi")) {
+        return message.channel.send(' **Bu Komutu Kullanmak için ** ⛔・ban-yetkilisi ** Rolüne Sahip Olman Lazım** ')
+            .then(m => m.delete(5000));
+    }
   let guild = message.guild
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -22,7 +26,7 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['ban'],
-  permLevel: 3,
+  permLevel: 0,
     kategori: "moderasyon",
 };
 exports.help = {
