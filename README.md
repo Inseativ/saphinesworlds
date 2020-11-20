@@ -1,12 +1,10 @@
-# RabeL BOT
+# Gweep Creative Youtube
 -------------------
 
-RabeL Bot Projesine Hoşgeldin!
+ Çekiliş Bot Projesine Hoşgeldin!
 
-```md
-~ GWEEPCREATIVE ~
-```
+ `GWEEPCREATIVE`
 
 -------------------
 
-<a herf="https://www.youtube.com">Deneme</a>
+<b>[Youtube](https://www.youtube.com/GweepCreativeOfficial) **|** [Discord](https://discord.gg/)</b>
