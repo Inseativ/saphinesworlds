@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const db = require('quick.db');
 const moment = require('moment');
-const GiveawaysManager = require('discord-giveaways')
+const { GiveawaysManager } = require('discord-giveaways');
 require('./util/eventLoader')(client);
 
 var prefix = ayarlar.prefix;
@@ -16,10 +16,6 @@ const log = message => {
 
 
 
-const YouTube = require('simple-youtube-api');
-const ytdl = require('ytdl-core');
-const youtube = new YouTube('AIzaSyCkT_L10rO_NixDHNjoAixUu45TVt0ES-s');
-const queue = new Map();
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
