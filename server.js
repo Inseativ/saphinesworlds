@@ -3,7 +3,9 @@ const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
+const db = require('quick.db');
 const moment = require('moment');
+const GiveawaysManager = require('discord-giveaways')
 require('./util/eventLoader')(client);
 
 var prefix = ayarlar.prefix;
@@ -112,4 +114,47 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
+
+//////çekiliş/////////
+if(!db.get("giveaways")) db.set("giveaways", []);
+
+const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
+
+    async getAllGiveaways(){
+        return db.get("giveaways");
+    }
+
+    async saveGiveaway(messageID, giveawayData){
+        db.push("giveaways", giveawayData);
+        return true;
+    }
+
+    async editGiveaway(messageID, giveawayData){
+        const giveaways = db.get("giveaways");
+        const newGiveawaysArray = giveaways.filter((giveaway) => giveaway.messageID !== messageID);
+        newGiveawaysArray.push(giveawayData);
+        db.set("giveaways", newGiveawaysArray);
+        return true;
+    }
+
+    async deleteGiveaway(messageID){
+        const newGiveawaysArray = db.get("giveaways").filter((giveaway) => giveaway.messageID !== messageID);
+        db.set("giveaways", newGiveawaysArray);
+        return true;
+    }
+  
+  
+};
+const manager = new GiveawayManagerWithOwnDatabase(client, {
+  storage: false,
+  updateCountdownEvery: 5000,
+  default: {
+    botsCanWin: false,
+    embedColor: "#0a99ff",
+    reaction: "🎉"
+  }
+});
+client.giveawaysManager = manager;
+
+///son///
 client.login(ayarlar.token);

@@ -48,7 +48,8 @@
     "weather-js": "^2.0.0",
     "ytdl": "^0.10.3",
     "ytdl-core": "^0.25.2",
-    "google-translate-api": "^2.3.0"
+    "google-translate-api": "^2.3.0",
+    "discord-giveaways": "^4.2.1"
   },
   "engines": {
     "node": "8.x"
