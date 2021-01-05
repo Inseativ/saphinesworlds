@@ -11,22 +11,22 @@ let prefix = ayarlar.prefix
   }
     let giveawayChannel = message.mentions.channels.first();
     if(!giveawayChannel){
-        return message.channel.send(`:x: Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş #kanal 1h 1 Nitro Classic\``);
+        return message.channel.send(` Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş-yap #kanal 1h 1 Mc premium\``);
     }
 
     let giveawayDuration = args[1];
     if(!giveawayDuration || isNaN(ms(giveawayDuration))){
-        return message.channel.send(`:x: Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş #kanal 1h 1 Nitro Classic\``);
+        return message.channel.send(` Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş-yap #kanal 1h 1 Mc premium\``);
     }
 
     let giveawayNumberWinners = args[2];
     if(isNaN(giveawayNumberWinners)){
-        return message.channel.send(`:x: Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş #kanal 1h 1 Nitro Classic\``);
+        return message.channel.send(` Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş-yap #kanal 1h 1 Mc premium\``);
     }
 
     let giveawayPrize = args.slice(3).join(' ');
     if(!giveawayPrize){
-        return message.channel.send(`:x: Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş #kanal 1h 1 Nitro Classic\``);
+        return message.channel.send(` Lütfen bir **kanal süre**, **kazanan** ve **ödül** belirtin!\nÖrnek kullanım: \`${prefix}çekiliş-yap #kanal 1h 1 Mc premium\``);
     }
 
  client.giveawaysManager.start(giveawayChannel, {
@@ -35,11 +35,11 @@ let prefix = ayarlar.prefix
             winnerCount: giveawayNumberWinners,
             hostedBy: message.author,
             messages: {
-            giveaway: "🎉 **ÇEKİLİŞ** 🎉",
-                giveawayEnded: "🎉 **ÇEKİLİŞ SONLANDI** 🎉",
+            giveaway: "**ÇEKİLİŞ**",
+                giveawayEnded: "**ÇEKİLİŞ SONLANDI**",
                 timeRemaining: "Kalan süre: **{duration}**!",
                 inviteToParticipate: "🎉 emojisine basarak katıl!",
-                winMessage: "🎉 Tebrikler, {winners}! **{prize}** ödülünü kazandınız!",
+                winMessage: " Tebrikler, {winners}! **{prize}** ödülünü kazandınız!",
                 embedFooter: "Çekiliş",
                 noWinner: "bir kazanan belirlenemedi!",
                 hostedBy: "Çekiliş sponsoru: {user}",

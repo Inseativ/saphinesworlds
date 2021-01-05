@@ -6,7 +6,7 @@ exports.run = async (award, message, args) => {
 
    
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.send("You don't have permission to use this command.");
+            message.channel.send("Yetersiz yetki");
             return;
           }
     
@@ -14,10 +14,10 @@ exports.run = async (award, message, args) => {
     let kazanan = args[1];
     let odul = args[2];
     let zaman = args[3];
-    if(!gweep) return message.channel.send("Please specify a valid message ID! (Usage: <MessageID> <WinnersAmount> <Prize> <TimeValue>)")
-    if(!kazanan) return message.channel.send("You didn't provide a valid amount of winners! (Usage: <MessageID> <WinnersAmount> <Prize> <TimeValue>)")
-    if(!odul) return message.channel.send("You didn't specify a prize! (Usage: <MessageID> <WinnersAmount> <Prize> <TimeValue>)")
-    if(!ms(zaman) && zaman) return message.channel.send("You didn't use a valid time format! (Usage: <MessageID> <WinnersAmount> <Prize> <TimeValue>)")
+    if(!gweep) return message.channel.send("Lütfen geçerli bir **mesaj id** girin! (Kullanım: <MesajID> <Kazanancak Sayı> <Ödel> <zaman)")
+    if(!kazanan) return message.channel.send("Geçerli bir **kazanan miktarı** sağlamadınız! (Kullanım: <MesajID> <Kazanacak Sayı> <Ödül> <Zaman>)")
+    if(!odul) return message.channel.send("Geçerli Bir **ödül** girin! (Kullanım: <MesajID> <Kazanacak Sayı> <Prize> <Zaman>)")
+    if(!ms(zaman) && zaman) return message.channel.send("Geçerli bir **zaman** girin! (Kullanım: <MesajID> <Kazanacak Sayı> <Ödül> <Zaman>)")
             award.giveawaysManager.edit(gweep, {
                 newWinnerCount: kazanan,
                 newPrize: odul,
@@ -31,12 +31,12 @@ exports.run = async (award, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['edit', 'çekiliş-edit'],
   permLevel: 0,
 };
 
 exports.help = {
-  name: 'edit',
+  name: 'çekiliş-düzenle',
   description: '',
   usage: ''
 };

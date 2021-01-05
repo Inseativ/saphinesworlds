@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
   }
 
     if(!args[0]){
-        return message.channel.send(':x: bir çekiliş kimliği **belirtmelisin!**');
+        return message.channel.send(' bir çekiliş kimliği **belirtmelisin!**');
     }
 
     let giveaway = 
@@ -18,18 +18,18 @@ exports.run = async (client, message, args) => {
     client.giveawaysManager.giveaways.find((g) => g.messageID === args[0]);
 
     if(!giveaway){
-        return message.channel.send(':x: sunucuda böyle bir çekiliş **bulunmuyor!** `'+ args.join(' ') + '`.');
+        return message.channel.send(' sunucuda böyle bir çekiliş **bulunmuyor!** `'+ args.join(' ') + '`.');
     }
 
     client.giveawaysManager.edit(giveaway.messageID, {
         setEndTimestamp: Date.now()
     })
     .then(() => {
-        message.channel.send(':x: çekiliş kısa sürede bitecek '+(client.giveawaysManager.options.updateCountdownEvery/1000)+' saniye...').then(a => a.delete({timeout: 10000}));
+        message.channel.send(': çekiliş kısa sürede bitecek '+(client.giveawaysManager.options.updateCountdownEvery/1000)+' saniye...').then(a => a.delete({timeout: 10000}));
     })
     .catch((e) => {
         if(e.startsWith(`:x: bu ID çekiliş kimliği ${giveaway.messageID} zaten bitti.`)){
-            message.channel.send(':x: Bu çekiliş çoktan sona erdi!');
+            message.channel.send(' Bu çekiliş çoktan sona erdi!');
         } else {
             console.error(e);
             message.channel.send('Bir hata oluştu...');

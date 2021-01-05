@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
 
 let messageID = args[0]
     if(!messageID){
-        return message.channel.send(':x: bir çekiliş kimliği **belirtmelisin!**');
+        return message.channel.send(' bir çekiliş kimliği **belirtmelisin!**');
     }
 client.giveawaysManager.reroll(messageID, {
     messages: {
@@ -24,7 +24,7 @@ client.giveawaysManager.reroll(messageID, {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['çekiliş-reroll'],
+  aliases: ['çekiliş-reroll', 'reroll'],
   permLevel: 0
 };
 

@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     return;
   }
     if (giveaways.length === 0) {
-      message.channel.send(':x: Bu sunucuda şu anda etkin bir çekiliş yok.');
+      message.channel.send(' Bu sunucuda şu anda etkin bir çekiliş yok.');
       return;
     }
 
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 **Kazanan(lar)**: ${g.data.winnerCount}
 **ID**: ${g.messageID}
 **Kanal**: <#${g.channelID}>`).join("\n\n")}`)
-  .setFooter(bot.user.username, bot.user.avatarURL());
+  .setFooter(bot.user.username, bot.user.avatarURL()());
  return message.channel.send(embed);
 }
 
