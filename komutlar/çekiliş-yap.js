@@ -42,7 +42,7 @@ let prefix = ayarlar.prefix
                 winMessage: " Tebrikler, {winners}! **{prize}** ödülünü kazandınız!",
                 embedFooter: "Çekiliş",
                 noWinner: "bir kazanan belirlenemedi!",
-                hostedBy: "Çekiliş sponsoru: {user}",
+                hostedBy: "Çekiliş Yapan: {user}",
                 winners: "kazanan(lar)",
                 endedAt: "Bitiş tarihi",
 units: {

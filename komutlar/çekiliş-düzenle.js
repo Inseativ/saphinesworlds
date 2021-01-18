@@ -23,9 +23,9 @@ exports.run = async (award, message, args) => {
                 newPrize: odul,
                 addTime: ms(zaman)
             }).then(() => {
-                message.channel.send("Success! Giveaway edited!");
+                message.channel.send("Başarılı! Eşantiyon düzenlendi!");
             }).catch((err) => {
-                message.channel.send("I couldn't find that giveaway.");
+                message.channel.send("Bu hediyeyi bulamadım.");
             });
     }
 exports.conf = {

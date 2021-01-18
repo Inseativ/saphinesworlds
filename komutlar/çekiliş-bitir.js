@@ -41,7 +41,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['çekiliş-sil'],
+  aliases: ['çekiliş-sil','çekiliş-son'],
   permLevel: 0
 };
 
